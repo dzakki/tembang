@@ -10,9 +10,8 @@ export default function Video({ urlImage, urlVideo }: VideoProps) {
 
   return (
     <>
-      <div className='relative w-[100px] h-[100px]'>
+      <div className='relative w-[100px] h-[100px]' onClick={() => setIsPlaying((prev) => !prev)}>
         <img
-          onClick={() => setIsPlaying((prev) => !prev)}
           src={urlImage || 'https://placehold.co/100x100'}
           alt='Rought Water'
           height={100}
