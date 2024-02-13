@@ -28,6 +28,7 @@ export default function FormSearch({ buttonSubmitType = 'default', onSubmit }: F
       className='flex flex-col px-[30px] w-full pb-6'
     >
       <input
+        autoFocus
         ref={inputRef}
         type='text'
         placeholder='Artist / Album / Title'

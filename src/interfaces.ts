@@ -5,4 +5,5 @@ export interface ItuneData {
   trackPrice: number;
   primaryGenreName: string;
   artworkUrl100: string;
+  previewUrl: string;
 }

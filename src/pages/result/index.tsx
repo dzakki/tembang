@@ -4,6 +4,7 @@ import FormSearch from '../../components/FormSearch';
 import { useGetItunes } from '../../hooks';
 import { ItuneData } from '../../interfaces';
 import Skeleton from '../../components/Skeleton';
+import Video from '../../components/Video';
 
 export default function Result() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -190,12 +191,9 @@ export default function Result() {
                   }}
                 >
                   <div>
-                    <img
-                      src={item.artworkUrl100 || 'https://placehold.co/100x100'}
-                      alt='Rought Water'
-                      height={100}
-                      width={100}
-                      className='rounded-xl h-[100px] w-[100px] object-cover'
+                    <Video
+                      urlImage={item.artworkUrl100}
+                      urlVideo={item.previewUrl}
                     />
                   </div>
                   <div className='flex flex-col flex-1 pt-1 pl-3 pr-0.5 justify-between'>
