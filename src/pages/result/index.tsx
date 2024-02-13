@@ -13,8 +13,11 @@ export default function Result() {
   const { data, isLoading } = useGetItunes(search ?? '');
 
   const limitData = useMemo(() => {
+    if (isLoading) {
+      return []
+    }
     return data?.slice(0, page * 10) ?? [];
-  }, [data, page]);
+  }, [data, isLoading, page]);
 
   const hasNoPage = page * 10 > (data?.length ?? 0);
 
